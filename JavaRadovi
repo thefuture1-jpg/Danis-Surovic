@@ -1,0 +1,3 @@
+git config --global user.name Danis Surovic
+git config --global user.mail surovicdanis99@gmail.com
+git config --global init.defaultBranch main
