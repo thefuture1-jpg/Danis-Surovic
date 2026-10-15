@@ -1,0 +1,208 @@
+package drugodina;
+import java.util.Scanner;
+
+
+
+
+public class vjezbe15102026 {
+
+	public static void main(String[] args) {
+		//Unijeti recenicu (putem skenera), i izracunati broj rijeci
+		Scanner s = new Scanner (System.in);
+		/*
+		System.out.println("Unesite vasu recenicu: ");
+		String recenica = s.nextLine();
+		
+		recenica = recenica.trim();
+		
+		int brojRijeci;
+		if (recenica.isEmpty()) {
+			brojRijeci=0;
+		} else {
+			String[] rijeci = recenica.split("\\s+");
+			brojRijeci = rijeci.length;
+			
+		}
+		System.out.println("Broj rijeci: " + brojRijeci);
+		s.close();
+		
+		//Da li je rijec palindrom
+		System.out.println("Unesite vasu rijec: ");
+		String rijec = s.nextLine().toLowerCase().trim();
+		StringBuilder sb = new StringBuilder(rijec);
+		String obrnuta = sb.reverse().toString();
+		
+		
+		if (rijec.equals(obrnuta) ) {
+			System.out.println("Jeste palindrom.");
+		} else {
+			System.out.println("Nije palindrom.");
+		} 
+		
+		//Odrediti broj samoglasnika i suglasnika u unesenoj recenici
+		System.out.println("Unesite vasu recenicu: ");
+		String recenica = s.nextLine().toLowerCase();
+		
+		int samoglasnici = 0;
+		int suglasnici = 0;
+		
+		for (int i = 0; i < recenica.length(); i++) {
+			char c = recenica.charAt(i);
+			
+			if (Character.isLetter(c)) { //da li je uopste slovo
+				if("aeiou".indexOf(c) != -1) {
+					samoglasnici++;
+				}else {
+					suglasnici++;
+				}
+				
+					
+			}
+			System.out.println("Broj samoglasnika: " + samoglasnici);
+	        System.out.println("Broj suglasnika: " + suglasnici);
+
+	        s.close();
+	    }
+	}
+		
+		
+		//koja se slova u stringu se ponavljaju
+		System.out.println("Unesite recenicu: ");
+		
+		String recenica = s.nextLine().toLowerCase();
+		
+		boolean imaPonavljanja = false;
+
+        for (int i = 0; i < recenica.length(); i++) {
+            char c = recenica.charAt(i);
+
+            
+            if (Character.isLetter(c) && recenica.indexOf(c) == i && recenica.lastIndexOf(c) != i) {
+
+                // Brojimo koliko puta se slovo pojavljuje
+                int broj = 0;
+                for (int j = 0; j < recenica.length(); j++) {
+                    if (recenica.charAt(j) == c) {
+                        broj++;
+                    }
+                }
+
+                System.out.println("Slovo '" + c + "' se ponavlja " + broj + " puta");
+                imaPonavljanja = true;
+            }
+        }
+
+        if (!imaPonavljanja) {
+            System.out.println("Nijedno slovo se ne ponavlja.");
+        }
+
+        s.close();
+        
+		//Za dva unijeta stringa provjerite da li je drugi podstring prvog
+		System.out.println("Unesite prvi string: ");
+		String prvi = s.nextLine().toLowerCase();
+
+        System.out.print("Unesite drugi string: ");
+        String drugi = s.nextLine().toLowerCase();
+
+        if (prvi.contains(drugi)) {
+            System.out.println("\"" + drugi + "\" jeste podstring od \"" + prvi + "\"");
+            System.out.println("Pocinje na poziciji: " + prvi.indexOf(drugi));
+        } else {
+            System.out.println("\"" + drugi + "\" nije podstring od \"" + prvi + "\"");
+        }
+
+        s.close();
+    } 
+//1. zadatak vjezbe
+	 StringBuilder sb = new StringBuilder("programiranje");
+	 sb.delete(3, 7);
+	 System.out.println("Poslije: " + sb);
+		 
+	 //2. zadatak
+		
+
+        System.out.print("Unesite rečenicu: ");
+        String recenica = s.nextLine();
+
+        String[] rijeci = recenica.split(" ");
+        StringBuilder rezultat = new StringBuilder();
+
+        for (int i = 0; i < rijeci.length; i++) {
+            String obrnuta = new StringBuilder(rijeci[i]).reverse().toString();
+            rezultat.append(obrnuta).append(" ");
+        }
+
+        System.out.println(rezultat.toString().trim());
+        sc.close();
+    }
+}
+        }
+        
+		//3. zadatak
+		System.out.print("Unesite brojeve: ");
+        String recenica = s.nextLine();
+        System.out.print("Unesite poziciju: ");
+        int p = s.nextInt();
+        int posljednja = recenica.length() - 1;
+        if (p < 0 || p > posljednja) {
+            System.out.println("Pozicija ne postoji.");
+            
+            if (recenica.charAt(1) == '0') {
+                System.out.println(1);
+            } else {
+                System.out.println(0);
+            }
+        } else if (p == posljednja) {
+            
+            if (recenica.charAt(p - 1) == '0') {
+                System.out.println(1);
+            } else {
+                System.out.println(0);
+            }
+        } else {
+            
+            if (recenica.charAt(p - 1) == '0' && recenica.charAt(p + 1) == '0') {
+                System.out.println(1);
+            } else {
+                System.out.println(0);
+            }
+        }
+        
+
+        s.close();
+        */
+
+		System.out.print("Unesite string cifara: ");
+        String string = s.nextLine().trim();
+
+        StringBuilder rezultat = new StringBuilder();
+
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            int cifra = c - '0';   
+            if (cifra % 2 == 0) {
+                rezultat.append('0');   
+            } else {
+                rezultat.append('1');   
+            }
+        }
+
+        System.out.println("Rezultat: " + rezultat);
+        s.close();
+	}
+}
+        
+
+      
+
+ 
+		
+		
+
+		
+		
+
+	
+
+
